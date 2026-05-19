@@ -2,12 +2,16 @@
 
 const userName = 'Mario';
 
+// Arrow
 
-// Dichiara la funzione qui.
+const greet = (name) => `Ciao ${name}`;
 
+console.log(greet('Mario')); // Ciao Mario
 
-// Invoca la funzione qui e stampa il risultato in console
+// Classic
 
+function _greet(name) {
+  return `Ciao ${name}`;
+}
 
-
-//Risultato atteso se si passa 'Mario': // ciao Mario
+console.log(_greet('Anna')); // Ciao Anna
