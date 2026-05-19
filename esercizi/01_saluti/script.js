@@ -3,15 +3,17 @@
 const userName = 'Mario';
 
 // Arrow
+{
+  const greet = (name) => `Ciao ${name}`;
 
-const greet = (name) => `Ciao ${name}`;
-
-console.log(greet('Mario')); // Ciao Mario
-
-// Classic
-
-function _greet(name) {
-  return `Ciao ${name}`;
+  console.log(greet(userName)); // Ciao Mario
 }
 
-console.log(_greet('Anna')); // Ciao Anna
+// Classic
+{
+  function greet(name) {
+    return `Ciao ${name}`;
+  }
+
+  console.log(greet(userName)); // Ciao Mario
+}
