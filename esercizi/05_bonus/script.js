@@ -7,12 +7,41 @@ e buonasera se è sera (oltre le 17)
 
 const name = 'Mario';
 
+// Arrow
+{
+  const greet = name => {
+    const hour = new Date().getHours();
 
-// Dichiara la funzione qui.
+    const greeting =
+      (hour <= 13 && 'Buongiorno') ||
+      (hour <= 17 && 'Buon pomeriggio') ||
+      'Buonasera';
 
+    return `${greeting} ${name}.`;
+  };
 
-// Invoca la funzione qui e stampa il risultato in console
+  console.log(greet(name));
+}
 
+// Classic
+{
+  function greet(name, date = new Date()) {
+    const hour = date.getHours();
+    let greeting = '';
 
+    if (hour <= 13) greeting = 'Buongiorno';
+    else if (hour <= 17) greeting = 'Buon pomeriggio';
+    else greeting = 'Buonasera';
 
-//Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
+    return `${greeting} ${name}.`;
+  }
+
+  console.log(greet(name));
+
+  // Testing with different times
+  // console.log(greet(name, new Date('2026-05-20T00:00:00')));
+  // console.log(greet(name, new Date('2026-05-20T14:00:00')));
+  // console.log(greet(name, new Date('2026-05-20T18:00:00')));
+}
+
+// Output: ('Mario' alle 18): "Buonasera Mario."
