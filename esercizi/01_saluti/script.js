@@ -6,7 +6,7 @@ const userName = 'Mario';
 {
   const greet = name => `Ciao ${name}`;
 
-  console.log(greet(userName)); // Ciao Mario
+  console.log(greet(userName));
 }
 
 // Classic
@@ -15,5 +15,7 @@ const userName = 'Mario';
     return `Ciao ${name}`;
   }
 
-  console.log(greet(userName)); // Ciao Mario
+  console.log(greet(userName));
 }
+
+// Output: Ciao Mario

@@ -1,13 +1,27 @@
 /* Scrivi una funzione che accetti un array di nomi e restituisca nuovo un array con le iniziali di ogni parola dell'array fornito */
 
-const names = ["Anna", "Luca", "Marco", "Adele", "Giovanni", "Alessandra"];
+const names = ['Anna', 'Luca', 'Marco', 'Adele', 'Giovanni', 'Alessandra'];
 
+// Arrow
+{
+  const getInitials = names => names.map(name => name[0]);
 
-// Dichiara la funzione qui.
+  console.log(getInitials(names));
+}
 
+// Classic
+{
+  function getInitials(names) {
+    const initials = [];
 
-// Invoca la funzione qui e stampa il risultato in console
+    for (let i = 0; i < names.length; i++) {
+      initials.push(names[i][0]);
+    }
 
+    return initials;
+  }
 
+  console.log(getInitials(names));
+}
 
-//Risultato atteso: ["A", "L", "M", "A", "G", "A"]
+// Output: ["A", "L", "M", "A", "G", "A"]
