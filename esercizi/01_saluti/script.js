@@ -4,7 +4,7 @@ const userName = 'Mario';
 
 // Arrow
 {
-  const greet = (name) => `Ciao ${name}`;
+  const greet = name => `Ciao ${name}`;
 
   console.log(greet(userName)); // Ciao Mario
 }
