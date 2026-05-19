@@ -2,12 +2,36 @@
 
 const word = 'javascript';
 
+// Arrow
+{
+  const countVowels = word => {
+    const vowels = 'aeiou';
+    let count = 0;
 
-// Dichiara la funzione qui.
+    for (const char of word) {
+      if (vowels.includes(char)) count++;
+    }
 
+    return count;
+  };
 
-// Invoca la funzione qui e stampa il risultato in console
+  console.log(countVowels(word));
+}
 
+// Classic
+{
+  function countVowels(word) {
+    const vowels = new Set(['a', 'e', 'i', 'o', 'u']);
+    let count = 0;
 
+    for (const char of word) {
+      if (vowels.has(char)) count++;
+    }
 
-//Risultato atteso se si passa 'javascript': 3 (a, a, i)
+    return count;
+  }
+
+  console.log(countVowels(word));
+}
+
+// Output: 3 (a, a, i)
