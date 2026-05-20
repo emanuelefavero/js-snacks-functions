@@ -4,7 +4,15 @@ const names = ['Anna', 'Luca', 'Marco', 'Adele', 'Giovanni', 'Alessandra'];
 
 // Arrow
 {
-  const getInitials = names => names.map(name => name[0]);
+  const getInitials = names => {
+    const initials = [];
+
+    for (const name of names) {
+      initials.push(name[0]);
+    }
+
+    return initials;
+  };
 
   console.log(getInitials(names));
 }
