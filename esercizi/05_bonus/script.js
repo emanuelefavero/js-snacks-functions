@@ -11,11 +11,11 @@ const name = 'Mario';
 {
   const greet = name => {
     const hour = new Date().getHours();
+    let greeting = '';
 
-    const greeting =
-      (hour <= 13 && 'Buongiorno') ||
-      (hour <= 17 && 'Buon pomeriggio') ||
-      'Buonasera';
+    if (hour <= 13) greeting = 'Buongiorno';
+    else if (hour <= 17) greeting = 'Buon pomeriggio';
+    else greeting = 'Buonasera';
 
     return `${greeting} ${name}.`;
   };
@@ -25,23 +25,18 @@ const name = 'Mario';
 
 // Classic
 {
-  function greet(name, date = new Date()) {
-    const hour = date.getHours();
-    let greeting = '';
+  function greet(name) {
+    const hour = new Date().getHours();
 
-    if (hour <= 13) greeting = 'Buongiorno';
-    else if (hour <= 17) greeting = 'Buon pomeriggio';
-    else greeting = 'Buonasera';
+    const greeting =
+      (hour <= 13 && 'Buongiorno') ||
+      (hour <= 17 && 'Buon pomeriggio') ||
+      'Buonasera';
 
     return `${greeting} ${name}.`;
   }
 
   console.log(greet(name));
-
-  // Testing with different times
-  // console.log(greet(name, new Date('2026-05-20T00:00:00')));
-  // console.log(greet(name, new Date('2026-05-20T14:00:00')));
-  // console.log(greet(name, new Date('2026-05-20T18:00:00')));
 }
 
-// Output: ('Mario' alle 18): "Buonasera Mario."
+// Output (alle 18): "Buonasera Mario."
