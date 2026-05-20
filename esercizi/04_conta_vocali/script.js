@@ -5,11 +5,12 @@ const word = 'javascript';
 // Arrow
 {
   const countVowels = word => {
-    const vowels = 'aeiou';
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
     let count = 0;
 
     for (const char of word) {
-      if (vowels.includes(char)) count++;
+      const lowerCaseChar = char.toLowerCase();
+      if (vowels.includes(lowerCaseChar)) count++;
     }
 
     return count;
@@ -21,11 +22,12 @@ const word = 'javascript';
 // Classic
 {
   function countVowels(word) {
-    const vowels = new Set(['a', 'e', 'i', 'o', 'u']);
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
     let count = 0;
 
     for (const char of word) {
-      if (vowels.has(char)) count++;
+      const lowerCaseChar = char.toLowerCase();
+      if (vowels.includes(lowerCaseChar)) count++;
     }
 
     return count;
