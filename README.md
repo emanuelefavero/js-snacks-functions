@@ -36,7 +36,7 @@ Risolvere il quarto esercizio nella cartella `05_bonus`.
 - Per ogni esercizio ho definito e invocato una versione con arrow function e una con funzione tradizionale.
 - Ho usato blocchi `{}` per separare le due soluzioni e poter mantenere lo stesso nome della funzione.
 - Ho mantenuto gli input di test fuori dai blocchi, cosi' le due versioni lavorano sugli stessi dati.
-- Dove utile, ho usato una soluzione piu' compatta per la versione arrow e una soluzione piu' esplicita per la versione tradizionale.
+- Per allenamento, in alcuni esercizi ho usato approcci leggermente diversi tra le due soluzioni, pur mantenendo la stessa logica di base.
 
 ## Riferimenti
 
